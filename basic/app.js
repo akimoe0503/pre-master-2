@@ -83,6 +83,137 @@ console.log(studentList[0].name);
 console.log(studentList[3].from);
 console.log(studentList[4].hobby);
 
+// ------------------ 条件分岐------------------
+
+// 変数weightに任意の数字を代入してください。
+// weightが200以上の場合はヘビー級
+// weightが115以上、118以下の場合はバンタム級
+// それ以外の場合はその他の階級
+// とconsoleに表示してください。
+
+let weight = 100;
+
+if (weight >= 200){
+	console.log('ヘビー級');
+}else if (weight >= 115 && weight<= 118){
+	console.log('バンダム級');
+}	else {
+		console.log('その他の階級')
+}
+
+// 変数greetingに任意の文字列を代入してください。
+// greetingがおはようの場合は日本語
+// greetingがgood morningの場合は英語
+// それ以外の場合は?
+// とconsoleに表示してください。
+
+let greeting = 'good morning'
+switch (greeting) {
+	case 'おはよう' :
+		console.log('日本語');
+		break;
+	case ('good morning'):
+		console.log('英語');
+		break;
+	default:
+	console.log('?');
+		break;
+}
+
+// 繰り返し
+for (let i = 1; i <= 10; i++) {
+	// let n =  i * 2;
+	// console.log('くりかえしているよ');
+		console.log(i);
+}
+
+// for文を使って。下のstudentList2のnameの部分をconsolecに全て表示せよ。
+// ヒント：:for文のiは○番目、という数字としても使えます。
+
+let studentList2 =[
+	{name:"Seedくん",from:"セブ島",hobby:"サーフィン"},
+	{name:"えりんごさん",from:"青森",hobby:"旅"},
+	{name:"あいちゃん",from:"沖縄",hobby:"旅行"},
+	{name:"クォッカ",from:"オーストラリア",hobby:"人と写真を撮る"},
+	{name:"えりぴょん",from:"和歌山",hobby:"もえぴーの専属カメラマン"},
+	{name:"めぐりん",from:"東京",hobby:"アウトドア"},
+	{name:"ゆうこりん",from:"沖縄",hobby:"写真"},
+	{name:"もえ",from:"山形",hobby:"韓ドラ"},
+	{name:"しょうさん",from:"岩手",hobby:"スノボしながらナンパ"},
+	{name:"ゆうだい",from:"大阪",hobby:"えいこうちゃんのファンクラブサイト作り"},
+	{name:"ゆた",from:"千葉",hobby:"田舎廻り"},
+	{name:"ルイス",from:"ペルー",hobby:"ヘアセット"},
+	{name:"このみん",from:"千葉",hobby:"ディズニー"},
+	{name:"よっしー",from:"京都",hobby:"デリバリー"}
+];
+
+for (let i = 0; i <= 12; i++) {
+	console.log(studentList2[i] ['name']);
+}
+
+// 初期化式で変数iに2を代入する
+// iが20以下の間繰り返す
+// 1回ごとにiを1増やす
+// 繰り返しのたびにiをconsoleに表示する
+
+
+for (let i =2; i<= 20; i++) {
+	console.log(i);
+}
+
+//1 - 30までの数値で、3の倍数ではないものを表示するプログラム
+//3の倍数の時だけ処理が不要なため、continueでスキップする。
+console.log('3の倍数でないものを表示する');
+for (let i = 1; i <= 30; i++) {
+    if (i % 3 === 0) {
+        continue;
+    }
+    console.log(i);
+}
+
+// 以下の条件にあうfor文を書いてください。
+
+// 初期化式で変数iに1を代入する
+// iが50以下の間繰り返す
+// 1回ごとにiを1増やす
+// 繰り返しのたびにiをconsoleに表示する
+// ただし、iが5の倍数でない場合は表示しない。
+console.log('5の場合のみ表示する')
+for (let i = 1; i <= 50; i++) {
+	if (i % 5 ===0) {
+			console.log(i);
+		}else{
+		continue;
+		}
+}
+
+console.log('乱数を使ったプログラム')
+// randomに0から10の数値がランダムに代入される
+var random = Math.floor( Math.random() * 6 );
+
+console.log( random );
+
+// ランダム変数を使って、おみくじを作ってみよう
+let omikuji = [
+'やったね大吉',
+'いいね中吉',
+'いいんじゃない小吉',
+'ラッキー吉',
+'おおぴえん大凶',
+'ざんねーーーん凶'];
+
+console.log(omikuji[random]);
+
+let dinnar = [
+'パスタ',
+'ぎょうざ定食',
+'ビビンバ',
+'パエリア',
+'ラーメン',
+'パンケーキ'];
+
+console.log(dinnar[random]);
+
 
 
 
